@@ -10,11 +10,13 @@ public class EnemyBehaviour : MonoBehaviour {
 
         // Use this for initialization
 	void Start () {
+        //find the player
         this.Target = GameObject.FindWithTag("Player").transform;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        //follow the player(target)
         this.Agent.SetDestination(this.Target.position);
 
 	}
