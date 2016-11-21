@@ -97,6 +97,7 @@
      <Compile Include="Assets\_Scripts\EnemyBehaviour.cs" />
      <Compile Include="Assets\_Scripts\GameController.cs" />
      <Compile Include="Assets\_Scripts\MenuController.cs" />
+     <Compile Include="Assets\_Scripts\PlayerBehaviour.cs" />
      <None Include="Assets\_ImportedAsset\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\_ImportedAsset\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />

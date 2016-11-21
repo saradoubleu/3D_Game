@@ -3,27 +3,33 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class Collectables : MonoBehaviour {
+    //PUBLIC INSTANCE VARIABLES
+    public Text ScoreLabel;
+    public Text HealthLabel;
+
     [Header("Sound Clips")]
     public AudioSource CoinSound;
     public AudioSource BottleSound;
 
-    public Text ScoreLabel;
+    //PRIVATE INSTANCE VARIABLES
+    private int score = 0;
 
-    int score = 0;
 
     // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+
+    // Update is called once per frame
+    void Update () {
 	
 	}
 
-    // coin pickup
-    private void OnTriggerEnter(Collider other)
+    void Start()
     {
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {//coin trigger increments score
         if(other.gameObject.CompareTag("Coin"))
         {
             ++score;
@@ -31,11 +37,11 @@ public class Collectables : MonoBehaviour {
 
             Destroy(other.gameObject);
             this.CoinSound.Play();
-        }
+        }//bottle pickup
         if (other.gameObject.CompareTag("Bottle"))
         {
             Destroy(other.gameObject);
-            //play sound
+            this.BottleSound.Play();
         }
     }
 }

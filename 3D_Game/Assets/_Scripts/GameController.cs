@@ -5,36 +5,25 @@ using System.Collections;
 public class GameController : MonoBehaviour
 {
 
-
-
     //PRIVATE INSTANCE VARIABLES
-    private int _health;
+    private float _timer;
 
     //PUBLIC INSTANCE VARIABLES
     [Header("UI Objects")]
-    public Text ScoreLabel;
-    public Text HealthLabel;
     public Text TimerLabel;  // text UI element for displaying timer
 
-    private float timer;  // variable to keep track of time
 
     void Start()
     {
-        this.timer = 60.0f;
-
-
-        if (this.TimerLabel != null)
-            this.TimerLabel.text = string.Format("{0:F2}", this.timer - Time.time);
-        //if time reaches 0  display game over text
-        //else if time reaces >0 && collected potions display "you win"
+        this._timer = 60.00f;
 
     }
 
     // Update is called once per frame
     void Update()
-    {
+    { string time = string.Format("{0:F2}", this._timer - Time.time);
 
         if (this.TimerLabel != null)
-            this.TimerLabel.text = string.Format("{0:F2}", this.timer - Time.time);
-    }
+            TimerLabel.text = "Remaining Time: " + time;
+        }
 }
