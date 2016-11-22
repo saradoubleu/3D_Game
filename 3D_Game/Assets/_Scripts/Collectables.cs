@@ -4,8 +4,7 @@ using System.Collections;
 
 public class Collectables : MonoBehaviour {
     //PUBLIC INSTANCE VARIABLES
-    public Text ScoreLabel;
-    public Text HealthLabel;
+    public GameController gamecontroller;
 
     [Header("Sound Clips")]
     public AudioSource CoinSound;
@@ -13,6 +12,10 @@ public class Collectables : MonoBehaviour {
 
     //PRIVATE INSTANCE VARIABLES
     private int score = 0;
+    private int treasure = 3;
+
+    private int scorevalue;
+    private int treasurevalue;
 
 
     // Use this for initialization
@@ -32,14 +35,13 @@ public class Collectables : MonoBehaviour {
     {//coin trigger increments score
         if(other.gameObject.CompareTag("Coin"))
         {
-            ++score;
-            ScoreLabel.text = "Score: " + score.ToString();
-
+            this.gamecontroller.ScoreValue += 1;
             Destroy(other.gameObject);
             this.CoinSound.Play();
         }//bottle pickup
         if (other.gameObject.CompareTag("Bottle"))
         {
+            this.gamecontroller.TreasureValue -= 1;
             Destroy(other.gameObject);
             this.BottleSound.Play();
         }

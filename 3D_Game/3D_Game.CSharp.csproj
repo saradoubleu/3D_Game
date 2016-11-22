@@ -117,7 +117,11 @@
     <Compile Include="Assets\_ImportedAsset\Standard Assets\Utility\TimedObjectDestructor.cs" />
     <Compile Include="Assets\_ImportedAsset\Standard Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\_ImportedAsset\Standard Assets\Utility\WaypointProgressTracker.cs" />
+    <Compile Include="Assets\_Scripts\Collectables.cs" />
+    <Compile Include="Assets\_Scripts\EnemyBehaviour.cs" />
+    <Compile Include="Assets\_Scripts\GameController.cs" />
     <Compile Include="Assets\_Scripts\MenuController.cs" />
+    <Compile Include="Assets\_Scripts\PlayerBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
