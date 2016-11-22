@@ -27,7 +27,6 @@ public class EnemyBehaviour : MonoBehaviour {
 	void Update () {
         //follow the player(target)
         this.Agent.SetDestination(this.Target.position);
-
 	}
 
     //Check for collision
@@ -39,6 +38,4 @@ public class EnemyBehaviour : MonoBehaviour {
             this._enemySound.Play();
         }
     }
-
-
 }
