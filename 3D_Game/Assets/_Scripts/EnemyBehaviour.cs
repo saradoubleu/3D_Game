@@ -19,6 +19,8 @@ public class EnemyBehaviour : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //find the player
+        Agent = GetComponent<NavMeshAgent>();
+  
         this.Target = GameObject.FindWithTag("Player").transform;
         this._enemySound = gameObject.GetComponent<AudioSource>();
     }
